@@ -6,42 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <header id="nav">
+        <nav>
+            <a href="#about">about</a> 
+            <a href="#experience">experience</a> 
+            <a href="#skills">skills</a> 
+            <a href="#connect">connect</a> 
+            <a href="#leave-message">messages</a> 
+        </nav>
+          
+    </header>
     
-    <section>
-        <h1>About</h1>
+    <section id="about">
+        <h1 class = "my-name">Aigerim Kwon</h1>
+        <h1 class = "itallic">About</h1>
         <p>My name is Aigerim Kwon and I am a Code the Dream student.
             I was born and raised in Kazakhstan, but currently live in Orlando, Florida. In 2012, I graduated with a bachelor's degree in Information Systems from Karaganda Economic University.</p>
     </section>
     
     
-    <section>
-        <h1>Experience</h1>
+    <section id="experience">
+        <h1 class = "itallic">Experience</h1>
         <ul> 
-           <li>Cabin crew</li>
-           <li>Kindergarten computer science teacher</li>
+           <li class = "exp">Cabin crew</li> 
+           <li class = "exp">Kindergarten computer science teacher</li>
         </ul>
     </section>
     
     <section id="skills">
         
-        <h2>Skills</h2>
-        <ul></ul>
+        <h2 class = "itallic">Skills</h2>
+        <ul class = "topskills"></ul>
 
     </section>
 
-    <section> 
-        <h1>Connect </h1>
+    <section id="connect"> 
+        <h1 class = "itallic">Connect </h1>
         <ul>
-          <li>kwonmailbox@gmail.com</li>
-          <li>https://github.com/aigerimkwon</li>
+          <li> <a href="mailto:kwonmailbox@gmail.com">kwonmailbox@gmail.com</a></li>
+          <li> <a href="https://github.com/aigerimkwon">https://github.com/aigerimkwon</a></li>
         </ul>
     </section>  
-    <section>
-      <h2>Leave a Message</h2>
+    <section id="leave-message">
+      <h2 class = "itallic">Leave a Message</h2>
       
-      <form name="leave_message">
+      <form class = "my-form" name="leave_message">
         
         <label for="name">Name</label> <br>
         <input type = "text"  name="name" required> <br>
@@ -54,12 +66,12 @@
       </form>
     </section>
     <section id="messages">
-        <h2>Messages</h2>
+        <h2 class = "itallic">Messages</h2>
        
         
         <ul></ul>
     </section>
-    <footer> </footer>
+    <footer class ="copyright"> </footer>
     <script src="js/index.js"></script>
 </body>
 </html>
