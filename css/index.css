@@ -1,15 +1,64 @@
 
 
 * {
-    padding:5px;
+    padding: 5px;
 }
+
 body {
     background-color: rgb(9, 16, 54);
     color: rgb(187, 184, 227);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
 }
-a {
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin-top: 0;
+    height: 60px;
+    
+    
+}
+nav .my-name {
+    float: left;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-family:cursive;
+    font-weight: bold;
+    color:rgb(215, 183, 183);
+    margin-left: 10px;
+}
+    
+
+ nav .nav-list  {
+   float: right;
+    padding-top: 4px;
+    margin: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+nav .nav-list li {
+    list-style: none;
+}
+
+nav .nav-list a {
+    display: block;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+ a {
     text-decoration: none;
     color: rgb(187, 184, 227);
     }
@@ -23,23 +72,6 @@ a {
     }
 
 
-
-#nav {
-    float: right;
-}    
-#nav a {
-    color: white;
-    font-size: 1.3em;
-}
-
-.my-name {
-    color:blueviolet;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: xx-large;
-    font-weight: 700;
-    
-
-}
 #about p {
     margin: 20px;
     font-size: 1.2em;
@@ -49,9 +81,10 @@ a {
     color: rgb(215, 183, 183);
     margin: 20px;
 }
-#experience ul {
-    list-style: none;
+ #experience ul {
+    list-style: none; 
 }
+
 .topskills li {
     background-color: rgb(104, 129, 181);
     color: rgb(215, 183, 183);
@@ -63,12 +96,13 @@ a {
     list-style: none;
 }
 .itallic {
+    margin-top: 3rem;
     color: white;
     font-style: italic;
 }
 
 #connect ul {
-    list-styl: none;
+    list-style: none;
     font-size: 1.2em;
     margin: 20px;
 }
@@ -78,64 +112,41 @@ a {
 
 .my-form input  {
     padding: 8px;
-    width: 30%;
+    width: 20%;
     background-color: rgb(119, 110, 180);
-}       
+}      
+.my-form label {
+    display: block;
+} 
 .my-form textarea {
     padding: 8px;
-    width: 30%;
+    width: 20%;
     background-color: rgb(119, 110, 180);
 }
 .my-form button {
     background-color: rgb(61, 120, 61);
     color: rgb(187, 184, 227);
-    padding: 10px, 15px;
     border: none;
-    font-size: 1.2em;
+    font-size: 15px;
+    width: 20%;
 
 }
 .copyright {
     font-style: italic;
 }
 
+.exp-flex {
+    display: flex;
+    
+}
+.my-form  {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
 
 
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-      
-  }
-  
-  
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
-  
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
-  }
   
   /* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -143,8 +154,11 @@ a {
   */
   
   @media (min-width: 481px) and (max-width: 767px) {
-    
-  }
+ 
+   .nav-list {
+    flex-wrap: wrap;
+   }
+
   
   /* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -152,5 +166,16 @@ a {
   */
   
   @media (min-width: 320px) and (max-width: 480px) {
-    
+    .exp-flex {
+        flex-direction: column;
+    }
+   
   }
+  .nav-list {
+    flex-wrap: wrap;
+   }
+
+  
+  
+}
+

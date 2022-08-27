@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header id="nav">
+    <header>
         <nav>
-            <a href="#about">about</a> 
-            <a href="#experience">experience</a> 
-            <a href="#skills">skills</a> 
-            <a href="#connect">connect</a> 
-            <a href="#leave-message">messages</a> 
+            <div class="my-name">Aigerim Kwon</div>
+                <ul class = "nav-list">
+                    <li class = "nav-item"><a href="#about">about</a> </li>
+                    <li class = "nav-item"><a href="#experience">experience</a></li> 
+                    <li class = "nav-item"><a href="#skills">skills</a> </li>
+                    <li class = "nav-item"><a href="#connect">connect</a> </li>
+                </ul>
         </nav>
-          
-    </header>
+          </header>
     
     <section id="about">
-        <h1 class = "my-name">Aigerim Kwon</h1>
+    
         <h1 class = "itallic">About</h1>
         <p>My name is Aigerim Kwon and I am a Code the Dream student.
             I was born and raised in Kazakhstan, but currently live in Orlando, Florida. In 2012, I graduated with a bachelor's degree in Information Systems from Karaganda Economic University.</p>
@@ -30,7 +31,7 @@
     
     <section id="experience">
         <h1 class = "itallic">Experience</h1>
-        <ul> 
+        <ul class="exp-flex"> 
            <li class = "exp">Cabin crew</li> 
            <li class = "exp">Kindergarten computer science teacher</li>
         </ul>
@@ -55,15 +56,16 @@
       
       <form class = "my-form" name="leave_message">
         
-        <label for="name">Name</label> <br>
-        <input type = "text"  name="name" required> <br>
-        <label for="email">Email Address</label> <br>
-        <input type = "email"  name="email" required> <br>
-        <label for="message">Message</label> <br>
+        <label for="name">Name</label> 
+        <input type = "text"  name="name" required> 
+        <label for="email">Email Address</label> 
+        <input type = "email"  name="email" required> 
+        <label for="message">Message</label> 
         <textarea name="message" required></textarea> <br><br>
 
         <button type="submit">Submit</button>
       </form>
+
     </section>
     <section id="messages">
         <h2 class = "itallic">Messages</h2>
