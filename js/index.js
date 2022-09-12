@@ -1,12 +1,27 @@
+
+// jump links support 
+
+
+var shiftWindow = function() { scrollBy(0, -50) };
+if (location.hash) shiftWindow();
+window.addEventListener("hashchange", shiftWindow);
+
+
+//copyright
+
+
 const today = new Date ();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
-copyright.innerHTML = `Aigerim Kwon, ${thisYear}`;
+copyright.innerHTML = `Developed by Aigerim Kwon, &copy ${thisYear}`;
 footer.appendChild(copyright);
 
 
-let skills = ['JavaScript', 'HTML', 'C++', 'PHP'];
+// skills 
+
+
+let skills = ['JavaScript', 'HTML', 'CSS', 'PHP'];
 let skillsSection = document.getElementById("skills");
 let skillsList = skillsSection.querySelector('ul');
 
@@ -15,6 +30,10 @@ for (let i = 0; i < skills.length; i ++) {
  skill.innerText = skills[i];
  skillsList.appendChild(skill);
 }
+
+
+
+// leave a message
 
 
 const messageForm = document.getElementsByName("leave_message");
@@ -49,12 +68,27 @@ messageForm.item(0).addEventListener('submit', (e) => {
 
 
 
-var githubRequest = new XMLHttpRequest();
-githubRequest.open ('GET', "https://api.github.com/users/aigerimkwon/repos");
-githubRequest.send();
-githubRequest.addEventListener('load', function() {
-var repositories = JSON.parse(this.responseText);
-console.log(repositories);
+// old XML
+
+
+// var githubRequest = new XMLHttpRequest();
+//githubRequest.open ('GET', "https://api.github.com/users/aigerimkwon/repos");
+//githubRequest.send();
+//githubRequest.addEventListener('load', function() {
+//var repositories = JSON.parse(this.responseText);
+//console.log(repositories);
+
+
+
+//fetch api github repos
+
+
+
+fetch (`https://api.github.com/users/aigerimkwon/repos`)
+.then(response => response.json()) 
+.then (function (data) {
+    const repositories = data;
+    console.log(repositories);
 
 
 const projectSection = document.getElementById('projects');
@@ -65,23 +99,27 @@ for (let i = 0; i < repositories.length; i ++) {
     project.innerHTML = `<a href = "${repositories[i].html_url}">${repositories[i].name}</a>`;
     projectList.appendChild(project);
    }
-}
-)
+})
 
-//Display Repositories in List
 
-   // Start below the line of code you just wrote
-    //Using "DOM Selection", select the #projects section by id and store it in a variable named projectSection
-    //Using "DOM Selection", query the projectSection (instead of the entire document) to find the <ul> element and store it in a variable named projectList
-   
-    //Create a for loop to iterate over your repositories Array, starting at index 0
-    //Inside the loop, create a new list item (li) element and store it in a variable named project
-    //hint: createElement method
-    //On the next line, set the inner text of your project variable to the current Array element's name property
-    //hint: access the Array element using bracket notation
-    //On the next line, append the project element to the projectList element
-    //hint: appendChild method
-    //Save and refresh your browser
-    //You should see your list of repositories beneath the "Projects" heading
+
+// hamburger for mobile navbar
+
+
+const hamburger = document.querySelector(".hamburger");
+const navList = document.querySelector(".nav-list");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navList.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.
+    addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navList.classList.remove("active");
+}))
+
+
 
 

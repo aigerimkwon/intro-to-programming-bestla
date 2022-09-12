@@ -7,25 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class = "navbar">
-        <nav>
-            <div class="my-name">Aigerim Kwon</div>
+    <header>
+        <nav class = "navbar">
+            
+            <div class="my-name">AIGERIM KWON</div>
+            
                 <ul class = "nav-list">
-                    <li class = "nav-item"><a href="#about">about</a> </li>
-                    <li class = "nav-item"><a href="#experience">experience</a></li> 
-                    <li class = "nav-item"><a href="#skills">skills</a> </li>
-                    <li class = "nav-item"><a href="#connect">connect</a> </li>
+                    <li class = "nav-item">
+                        <a href="#about" class="nav-link">about</a> </li>
+                    <li class = "nav-item">
+                        <a href="#experience" class="nav-link">experience</a></li> 
+                    <li class = "nav-item">
+                        <a href="#skills" class="nav-link">skills</a> </li>
+                    <li class = "nav-item">
+                        <a href="#projects" class="nav-link">projects</a> </li>
+                    <li class = "nav-item">
+                        <a href="#connect" class="nav-link">connect</a> </li>
                 </ul>
+                <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
         </nav>
           </header>
-    
+   
     <section id="about">
     
         <h1 class = "itallic">About</h1>
+        <div class = "container">
+        <img src="img/img.jpg" alt="Avatar"> 
         <p>My name is Aigerim Kwon and I am a Code the Dream student.
-            I was born and raised in Kazakhstan, but currently live in Orlando, Florida. In 2012, I graduated with a bachelor's degree in Information Systems from Karaganda Economic University.</p>
+            I was born and raised in Kazakhstan, but currently I live in Orlando, Florida. In 2012, I graduated with a bachelor's degree in Information Systems from Karaganda Economic University. I am continuing my education at Code the Dream to pursue a career in Information Technology.</p>
+            
+        </div>
     </section>
     
     
@@ -71,7 +91,7 @@
         <label for="message">Message</label> 
         <textarea name="message" required></textarea> <br><br>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Send</button>
       </form>
 
     </section>
@@ -84,6 +104,7 @@
     <footer class ="copyright"> </footer>
     <script src="js/index.js"></script>
 </body>
+
 </html>
 
 
